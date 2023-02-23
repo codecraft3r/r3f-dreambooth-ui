@@ -3,6 +3,7 @@ import React, { Suspense, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Stage } from '@react-three/drei'
 import { Knob2 } from './Knob2'
+import { Frame } from './Frame'
 export default function Viewer() {
   const ref = useRef()
   return (
@@ -10,11 +11,15 @@ export default function Viewer() {
       <Suspense fallback={null}>
         <Stage controls={ref} preset="rembrandt" intensity={1}  environment="city">
 
-          <Knob2 position={[0, 0, 0]} />
+          <Knob2 position={[0, 0, 0]} dialKey={1} />
+          <Knob2 position={[2, 0, 0]} dialKey={2} />
+          <Knob2 position={[4, 0, 0]} dialKey={3} />
+          <Knob2 position={[6, 0, 0]} dialKey={4} />
 
+          <Frame />
         </Stage>
       </Suspense>
-      {/* <OrbitControls ref={ref} /> */}
+       <OrbitControls ref={ref} /> 
     </Canvas>
   )
 }

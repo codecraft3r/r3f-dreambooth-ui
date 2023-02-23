@@ -21,11 +21,13 @@ export function Knob2(props) {
     }
   }
 
+
+
   return (
-    <>
-    <KnobValueText knobVal={knobVal} />
-    <Knob2Model ref={knob} onClick={(e) => handleClick(e)} />
-    </>
+    <group {...props}>
+      <KnobValueText knobVal={knobVal} />
+      <Knob2Model ref={knob} onClick={(e) => handleClick(e)} />
+    </group>
   )
 }
 
