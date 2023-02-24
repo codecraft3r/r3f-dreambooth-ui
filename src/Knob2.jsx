@@ -9,12 +9,11 @@ import { useGLTF, Text } from '@react-three/drei'
 export function Knob2(props) {
   const knob = useRef()
   const [knobVal, setKnobVal] = useState(0)
-
+  const knobSteps = props.knobSteps
   const handleClick = (e) => {    
     e.stopPropagation()
-    knob.current.rotation.z += 0.25
+    knob.current.rotation.z += 6 / knobSteps
     setKnobVal(knobVal + 1)
-    console.log(knobVal)
     if (knob.current.rotation.z > 6) {
       knob.current.rotation.z = 0
       setKnobVal(0)
