@@ -5,11 +5,11 @@ Command: npx gltfjsx@6.1.4 public/knob2.gltf --transform
 
 import React, { useRef, useState, forwardRef } from 'react'
 import { useGLTF, Text } from '@react-three/drei'
-
 export function Knob2(props) {
   const knob = useRef()
   const [knobVal, setKnobVal] = useState(0)
   const knobSteps = props.knobSteps
+  
   const handleClick = (e) => {    
     e.stopPropagation()
     knob.current.rotation.z += 6 / knobSteps

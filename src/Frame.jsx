@@ -1,13 +1,15 @@
 import React, { useRef } from 'react'
 import { Image } from '@react-three/drei'
-import { useDials } from './stores/useDials'
+import { Model as FrameModel } from './SquareFrame'
 
 export function Frame(props) {
+    const image = useRef()
     const frame = useRef()
 
     return (
         <group {...props}>
-            <Image ref={frame} url="0.jpeg" position={[3, 3, 0]} scale={[3, 3, 3]} />
+            <FrameModel ref={frame} scale={[3,3,3]}/>
+            <Image ref={image} url="0.jpeg" position={[0, 0, -.1]} scale={[3, 3, 3]} />
         </group>
     )
 }

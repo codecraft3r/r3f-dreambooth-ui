@@ -16,7 +16,7 @@ export default function Viewer() {
           <Knob2 position={[4, 0, 0]} knobSteps={2} />
           <Knob2 position={[6, 0, 0]} knobSteps={6} />
 
-          <Frame />
+          <Frame  position={[3, 3, 0]} />
         </Stage>
       </Suspense>
        <OrbitControls ref={ref} /> 
