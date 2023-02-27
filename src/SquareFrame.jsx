@@ -5,7 +5,7 @@ Command: npx gltfjsx@6.1.4 squareFrame.gltf --transform
 
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
-
+import { knobStore } from './stores/knobStore'
 export function Model(props) {
   const { nodes, materials } = useGLTF('/squareFrame-transformed.glb')
   return (

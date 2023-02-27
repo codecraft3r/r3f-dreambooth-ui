@@ -11,10 +11,10 @@ export default function Viewer() {
       <Suspense fallback={null}>
         <Stage controls={ref} preset="rembrandt" intensity={1}  environment="city">
 
-          <Knob2 position={[0, 0, 0]} knobSteps={3} />
-          <Knob2 position={[2, 0, 0]} knobSteps={5} />
-          <Knob2 position={[4, 0, 0]} knobSteps={2} />
-          <Knob2 position={[6, 0, 0]} knobSteps={6} />
+          <Knob2 position={[0, 0, 0]} knobSteps={3} knobKey={0} />
+          <Knob2 position={[2, 0, 0]} knobSteps={3} knobKey={1} />
+          <Knob2 position={[4, 0, 0]} knobSteps={4} knobKey={2} />
+          <Knob2 position={[6, 0, 0]} knobSteps={4} knobKey={3} />
 
           <Frame  position={[3, 3, 0]} />
         </Stage>
